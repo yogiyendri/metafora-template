@@ -68,7 +68,7 @@ export const NavItems = ({ navItems }: { navItems: NavItemsProps[] }) => {
                               >
                                 <span>{subItem.title}</span>
                                 {subItem.badge && (
-                                  <SidebarMenuBadge className="bg-primary ml-2 text-white">
+                                  <SidebarMenuBadge>
                                     {subItem.badge}
                                   </SidebarMenuBadge>
                                 )}
@@ -89,9 +89,7 @@ export const NavItems = ({ navItems }: { navItems: NavItemsProps[] }) => {
                     </Link>
                   </SidebarMenuButton>
                   {item.badge && (
-                    <SidebarMenuBadge className="bg-primary text-white peer-hover/menu-button:text-white peer-data-[active=true]/menu-button:text-white">
-                      {item.badge}
-                    </SidebarMenuBadge>
+                    <SidebarMenuBadge>{item.badge}</SidebarMenuBadge>
                   )}
                 </SidebarMenuItem>
               );
