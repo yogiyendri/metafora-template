@@ -1,4 +1,10 @@
-import { LogIn, Rocket, UserPlus2, type LucideIcon } from 'lucide-react';
+import {
+  LayoutGrid,
+  LogIn,
+  Rocket,
+  UserPlus2,
+  type LucideIcon,
+} from 'lucide-react';
 
 interface SubMenuItem {
   title: string;
@@ -27,6 +33,22 @@ export const navItems: NavItemsProps[] = [
         name: 'Dashboard',
         url: '/',
         icon: Rocket,
+      },
+    ],
+  },
+  {
+    title: 'Components',
+    menu: [
+      {
+        name: 'Widgets',
+        icon: LayoutGrid,
+        items: [
+          {
+            title: 'Metrics',
+            url: '/widgets/metrics',
+            badge: 'New',
+          },
+        ],
       },
     ],
   },
