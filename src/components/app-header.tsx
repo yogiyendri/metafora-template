@@ -34,11 +34,11 @@ export const AppHeader = () => {
     >
       <div className="flex w-full items-center justify-between">
         <div className="flex items-center gap-2">
-          {isMobile && <SidebarTrigger />}
+          {isMobile && <SidebarTrigger className="size-9" />}
           <CommandMenu />
         </div>
         <Link href="/" className="block md:hidden">
-          <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+          <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-9 items-center justify-center rounded-lg">
             <Crown size={16} aria-label="logo" />
           </div>
         </Link>

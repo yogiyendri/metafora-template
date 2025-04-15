@@ -20,8 +20,8 @@ export const UserNavigation = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="relative h-8 w-8 rounded-full">
-          <Avatar className="h-8 w-8">
+        <Button variant="ghost" className="relative size-9 rounded-full">
+          <Avatar className="size-9">
             <AvatarImage
               src="https://avatars.githubusercontent.com/u/34170539?v=4"
               alt="Avatar"
