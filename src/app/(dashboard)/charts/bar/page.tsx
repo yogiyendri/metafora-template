@@ -11,7 +11,7 @@ import { ChartBarActive } from '@/components/charts/bar/chart-bar-active';
 import { ChartBarNegative } from '@/components/charts/bar/chart-bar-negative';
 import { ChartBarInteractive } from '@/components/charts/bar/chart-bar-interactive';
 
-export default function BarChartsPage() {
+export default function ChartsBarPage() {
   return (
     <Grid>
       <GridItem span={4}>
