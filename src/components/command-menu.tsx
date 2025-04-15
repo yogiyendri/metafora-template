@@ -1,12 +1,12 @@
-'use client'
+'use client';
 
-import * as React from 'react'
-import { type DialogProps } from '@radix-ui/react-dialog'
-import { cn } from '@/lib/utils'
-import { File, Search } from 'lucide-react'
-import { useIsMobile } from '@/hooks/use-mobile'
+import * as React from 'react';
+import { type DialogProps } from '@radix-ui/react-dialog';
+import { cn } from '@/lib/utils';
+import { File, Search } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button';
 import {
   CommandDialog,
   CommandEmpty,
@@ -15,11 +15,11 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from '@/components/ui/command'
+} from '@/components/ui/command';
 
 export function CommandMenu({ ...props }: DialogProps) {
-  const [open, setOpen] = React.useState(false)
-  const isMobile = useIsMobile()
+  const [open, setOpen] = React.useState(false);
+  const isMobile = useIsMobile();
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -30,17 +30,17 @@ export function CommandMenu({ ...props }: DialogProps) {
           e.target instanceof HTMLTextAreaElement ||
           e.target instanceof HTMLSelectElement
         ) {
-          return
+          return;
         }
 
-        e.preventDefault()
-        setOpen((open) => !open)
+        e.preventDefault();
+        setOpen((open) => !open);
       }
-    }
+    };
 
-    document.addEventListener('keydown', down)
-    return () => document.removeEventListener('keydown', down)
-  }, [])
+    document.addEventListener('keydown', down);
+    return () => document.removeEventListener('keydown', down);
+  }, []);
 
   return (
     <>
@@ -49,14 +49,14 @@ export function CommandMenu({ ...props }: DialogProps) {
           variant="outline"
           size="lg"
           className={cn(
-            'relative flex w-full items-center justify-start gap-2 pl-4 text-sm font-normal text-muted-foreground sm:pr-12 md:w-40 lg:w-96'
+            'text-muted-foreground relative flex w-full items-center justify-start gap-2 pl-4 text-sm font-normal sm:pr-12 md:w-40 lg:w-96'
           )}
           onClick={() => setOpen(true)}
           {...props}
         >
           <Search />
           <span className="hidden lg:block">Cari halaman...</span>
-          <kbd className="pointer-events-none absolute right-2 top-2 hidden h-6 select-none items-center gap-1 rounded-md bg-primary px-1.5 font-mono text-xs font-medium text-white sm:flex">
+          <kbd className="bg-muted pointer-events-none absolute top-2 right-2 hidden h-6 items-center gap-1 rounded border px-1.5 font-mono text-xs font-medium opacity-100 select-none sm:flex">
             <span className="text-xs">⌘</span>K
           </kbd>
         </Button>
@@ -94,5 +94,5 @@ export function CommandMenu({ ...props }: DialogProps) {
         </CommandList>
       </CommandDialog>
     </>
-  )
+  );
 }
