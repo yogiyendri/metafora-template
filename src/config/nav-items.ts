@@ -56,6 +56,11 @@ export const navItems: NavItemsProps[] = [
         icon: ChartColumnBig,
         items: [
           {
+            title: 'Area Chart',
+            url: '/charts/area',
+            badge: 'New',
+          },
+          {
             title: 'Bar Chart',
             url: '/charts/bar',
             badge: 'New',
