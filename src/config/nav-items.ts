@@ -1,4 +1,5 @@
 import {
+  ChartColumnBig,
   LayoutGrid,
   LogIn,
   Rocket,
@@ -46,6 +47,17 @@ export const navItems: NavItemsProps[] = [
           {
             title: 'Metrics',
             url: '/widgets/metrics',
+            badge: 'New',
+          },
+        ],
+      },
+      {
+        name: 'Charts',
+        icon: ChartColumnBig,
+        items: [
+          {
+            title: 'Bar Chart',
+            url: '/charts/bar',
             badge: 'New',
           },
         ],
