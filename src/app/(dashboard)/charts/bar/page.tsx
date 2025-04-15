@@ -1,15 +1,15 @@
 import React from 'react';
 import { Grid, GridItem } from '@/components/ui/grid';
-import { ChartBarDefault } from '@/components/charts/bar/chart-bar-default';
-import { ChartBarHorizontal } from '@/components/charts/bar/chart-bar-horizontal';
-import { ChartBarMultiple } from '@/components/charts/bar/chart-bar-multiple';
-import { ChartBarLabel } from '@/components/charts/bar/chart-bar-label';
-import { ChartBarLabelCustom } from '@/components/charts/bar/chart-bar-label-custom';
-import { ChartBarMixed } from '@/components/charts/bar/chart-bar-mixed';
-import { ChartBarStacked } from '@/components/charts/bar/chart-bar-stacked';
-import { ChartBarActive } from '@/components/charts/bar/chart-bar-active';
-import { ChartBarNegative } from '@/components/charts/bar/chart-bar-negative';
-import { ChartBarInteractive } from '@/components/charts/bar/chart-bar-interactive';
+import { ChartBarDefault } from '@/components/charts/chart-bar-default';
+import { ChartBarHorizontal } from '@/components/charts/chart-bar-horizontal';
+import { ChartBarMultiple } from '@/components/charts/chart-bar-multiple';
+import { ChartBarLabel } from '@/components/charts/chart-bar-label';
+import { ChartBarLabelCustom } from '@/components/charts/chart-bar-label-custom';
+import { ChartBarMixed } from '@/components/charts/chart-bar-mixed';
+import { ChartBarStacked } from '@/components/charts/chart-bar-stacked';
+import { ChartBarActive } from '@/components/charts/chart-bar-active';
+import { ChartBarNegative } from '@/components/charts/chart-bar-negative';
+import { ChartBarInteractive } from '@/components/charts/chart-bar-interactive';
 
 export default function ChartsBarPage() {
   return (
