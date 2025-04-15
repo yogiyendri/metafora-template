@@ -65,6 +65,11 @@ export const navItems: NavItemsProps[] = [
             url: '/charts/bar',
             badge: 'New',
           },
+          {
+            title: 'Line Chart',
+            url: '/charts/line',
+            badge: 'New',
+          },
         ],
       },
     ],
