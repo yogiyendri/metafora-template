@@ -53,7 +53,7 @@ export function ChartRadialShape() {
               gridType="circle"
               radialLines={false}
               stroke="none"
-              className="first:fill-muted last:fill-background"
+              className="first:fill-muted last:fill-card"
               polarRadius={[86, 74]}
             />
             <RadialBar dataKey="visitors" background />
