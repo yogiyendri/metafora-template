@@ -53,7 +53,7 @@ export const MetricProgress = ({
   ]
 
   return (
-    <Card className={cn('shadow-sm', className)}>
+    <Card className={cn('shadow-none', className)}>
       <div className="relative flex justify-between">
         <CardHeader className="w-full">
           <div className="space-y-2">

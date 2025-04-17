@@ -33,7 +33,7 @@ export const MetricChart = ({
   ...props
 }: MetricsChartProps) => {
   return (
-    <Card className={cn('shadow-sm', className)} {...props}>
+    <Card className={cn('shadow-none', className)} {...props}>
       <CardHeader>
         <CardDescription>{title}</CardDescription>
         <div className="flex w-full items-center justify-between">
