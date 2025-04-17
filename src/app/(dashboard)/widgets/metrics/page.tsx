@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, GridItem } from '@/components/ui/grid'
-import { MetricIcon } from '@/components/widgets/metrics/metric-icon'
+import { MetricIcon } from '@/components/widgets/metric-icon'
 import { Box, CircleDollarSign, RotateCcw, Users2 } from 'lucide-react'
 
 export default function MetricsPage() {
