@@ -85,6 +85,11 @@ export const navItems: NavItemsProps[] = [
             url: '/charts/radial',
             badge: 'New',
           },
+          {
+            title: 'Tooltip',
+            url: '/charts/tooltip',
+            badge: 'New',
+          },
         ],
       },
     ],
