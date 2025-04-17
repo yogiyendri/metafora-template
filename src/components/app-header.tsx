@@ -28,7 +28,7 @@ export const AppHeader = () => {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 flex h-16 shrink-0 items-center gap-2 px-4 backdrop-blur-xl transition-all duration-300 lg:px-6',
+        'sticky top-0 z-0 flex h-16 shrink-0 items-center gap-2 px-4 backdrop-blur-xl transition-all duration-300 lg:px-6',
         isScrolled ? 'bg-muted/50 shadow-sm' : 'bg-transparent'
       )}
     >
