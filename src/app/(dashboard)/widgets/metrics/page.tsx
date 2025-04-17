@@ -4,6 +4,7 @@ import { MetricIcon } from '@/components/widgets/metric-icon'
 import { Box, CircleDollarSign, RotateCcw, Users2 } from 'lucide-react'
 import { MetricChart } from '@/components/widgets/metric-chart'
 import { MetricProgress } from '@/components/widgets/metric-progress'
+import { Counter } from '@/components/ui/counter'
 
 export default function MetricsPage() {
   return (
@@ -11,11 +12,7 @@ export default function MetricsPage() {
       <GridItem span={3}>
         <MetricIcon
           title="Sales"
-          value={(4520).toLocaleString('en-US', {
-            currency: 'USD',
-            style: 'currency',
-            maximumFractionDigits: 0,
-          })}
+          value={<Counter value={4520} locale="en-US" currency="USD" />}
           percentage={12.43}
           detailPercentage="vs last year"
           icon={CircleDollarSign}
@@ -25,7 +22,7 @@ export default function MetricsPage() {
       <GridItem span={3}>
         <MetricIcon
           title="Refunds"
-          value={128}
+          value={<Counter value={128} />}
           percentage={-5.2}
           detailPercentage="vs last month"
           icon={RotateCcw}
@@ -35,7 +32,7 @@ export default function MetricsPage() {
       <GridItem span={3}>
         <MetricIcon
           title="Visitors Today"
-          value={3254}
+          value={<Counter value={3254} />}
           percentage={1.2}
           detailPercentage="vs yesterday"
           icon={Users2}
@@ -45,7 +42,7 @@ export default function MetricsPage() {
       <GridItem span={3}>
         <MetricIcon
           title="Orders"
-          value={542}
+          value={<Counter value={542} />}
           percentage={8.5}
           detailPercentage="vs last week"
           icon={Box}
@@ -55,11 +52,7 @@ export default function MetricsPage() {
       <GridItem span={3}>
         <MetricChart
           title="Sales"
-          value={(4520).toLocaleString('en-US', {
-            currency: 'USD',
-            style: 'currency',
-            maximumFractionDigits: 0,
-          })}
+          value={<Counter value={4520} locale="en-US" currency="USD" />}
           chartData={[
             { value: 1690 },
             { value: 1416 },
@@ -81,7 +74,7 @@ export default function MetricsPage() {
       <GridItem span={3}>
         <MetricChart
           title="Refunds"
-          value={128}
+          value={<Counter value={128} />}
           chartData={[
             { value: 10 },
             { value: 12 },
@@ -103,7 +96,7 @@ export default function MetricsPage() {
       <GridItem span={3}>
         <MetricChart
           title="Visitors Today"
-          value={3254}
+          value={<Counter value={3254} />}
           chartData={[
             { value: 410 },
             { value: 520 },
@@ -120,7 +113,7 @@ export default function MetricsPage() {
       <GridItem span={3}>
         <MetricChart
           title="Orders"
-          value={542}
+          value={<Counter value={542} />}
           chartData={[
             { value: 65 },
             { value: 82 },
@@ -137,11 +130,7 @@ export default function MetricsPage() {
       <GridItem span={3}>
         <MetricProgress
           title="Sales"
-          value={(4520).toLocaleString('en-US', {
-            currency: 'USD',
-            style: 'currency',
-            maximumFractionDigits: 0,
-          })}
+          value={<Counter value={4520} locale="en-US" currency="USD" />}
           percentage={12.43}
           detailPercentage="vs last year"
           progress={50}
@@ -150,7 +139,7 @@ export default function MetricsPage() {
       <GridItem span={3}>
         <MetricProgress
           title="Refunds"
-          value={128}
+          value={<Counter value={128} />}
           percentage={-5.2}
           detailPercentage="vs last month"
           progress={24}
@@ -159,7 +148,7 @@ export default function MetricsPage() {
       <GridItem span={3}>
         <MetricProgress
           title="Visitors Today"
-          value={3254}
+          value={<Counter value={3254} />}
           percentage={1.2}
           detailPercentage="vs yesterday"
           progress={76}
@@ -168,7 +157,7 @@ export default function MetricsPage() {
       <GridItem span={3}>
         <MetricProgress
           title="Orders"
-          value={542}
+          value={<Counter value={542} />}
           percentage={8.5}
           detailPercentage="vs last week"
           progress={94}
