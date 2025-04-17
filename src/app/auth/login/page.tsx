@@ -1,6 +1,6 @@
-import React from 'react';
-import { AuthWrapper } from '@/components/auth/auth-wrapper';
-import { LoginForm } from '@/components/auth/login-form';
+import React from 'react'
+import { AuthWrapper } from '@/components/auth/auth-wrapper'
+import { LoginForm } from '@/components/auth/login-form'
 
 export default function LoginPage() {
   return (
@@ -13,5 +13,5 @@ export default function LoginPage() {
     >
       <LoginForm />
     </AuthWrapper>
-  );
+  )
 }

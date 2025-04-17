@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import { Label, PolarRadiusAxis, RadialBar, RadialBarChart } from 'recharts';
+import { Label, PolarRadiusAxis, RadialBar, RadialBarChart } from 'recharts'
 
 import {
   Card,
@@ -8,15 +8,15 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@/components/ui/card'
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from '@/components/ui/chart';
+} from '@/components/ui/chart'
 
-const chartData = [{ month: 'january', desktop: 1260, mobile: 570 }];
+const chartData = [{ month: 'january', desktop: 1260, mobile: 570 }]
 
 const chartConfig = {
   desktop: {
@@ -27,10 +27,10 @@ const chartConfig = {
     label: 'Mobile',
     color: 'var(--chart-2)',
   },
-} satisfies ChartConfig;
+} satisfies ChartConfig
 
 export function ChartRadialStacked() {
-  const totalVisitors = chartData[0].desktop + chartData[0].mobile;
+  const totalVisitors = chartData[0].desktop + chartData[0].mobile
 
   return (
     <Card className="flex flex-col shadow-none">
@@ -74,7 +74,7 @@ export function ChartRadialStacked() {
                           Visitors
                         </tspan>
                       </text>
-                    );
+                    )
                   }
                 }}
               />
@@ -97,5 +97,5 @@ export function ChartRadialStacked() {
         </ChartContainer>
       </CardContent>
     </Card>
-  );
+  )
 }

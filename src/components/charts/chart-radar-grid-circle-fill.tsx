@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from 'recharts';
+import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from 'recharts'
 
 import {
   Card,
@@ -8,13 +8,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@/components/ui/card'
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from '@/components/ui/chart';
+} from '@/components/ui/chart'
 
 const chartData = [
   { month: 'January', desktop: 186 },
@@ -23,14 +23,14 @@ const chartData = [
   { month: 'April', desktop: 203 },
   { month: 'May', desktop: 209 },
   { month: 'June', desktop: 264 },
-];
+]
 
 const chartConfig = {
   desktop: {
     label: 'Desktop',
     color: 'var(--chart-1)',
   },
-} satisfies ChartConfig;
+} satisfies ChartConfig
 
 export function ChartRadarGridCircleFill() {
   return (
@@ -62,5 +62,5 @@ export function ChartRadarGridCircleFill() {
         </ChartContainer>
       </CardContent>
     </Card>
-  );
+  )
 }

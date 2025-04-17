@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import React from 'react';
+import React from 'react'
 import {
   Sidebar,
   SidebarContent,
@@ -8,11 +8,11 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from '@/components/ui/sidebar';
-import Link from 'next/link';
-import { Crown } from 'lucide-react';
-import { NavItems } from '@/components/nav-items';
-import { navItems } from '@/config/nav-items';
+} from '@/components/ui/sidebar'
+import Link from 'next/link'
+import { Crown } from 'lucide-react'
+import { NavItems } from '@/components/nav-items'
+import { navItems } from '@/config/nav-items'
 
 export const AppSidebar = ({
   ...props
@@ -42,5 +42,5 @@ export const AppSidebar = ({
         <NavItems navItems={navItems} />
       </SidebarContent>
     </Sidebar>
-  );
-};
+  )
+}

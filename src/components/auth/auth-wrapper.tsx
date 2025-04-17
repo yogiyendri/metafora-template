@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
-import { Crown } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { buttonVariants } from '@/components/ui/button';
+import React from 'react'
+import Link from 'next/link'
+import { Crown } from 'lucide-react'
+import { cn } from '@/lib/utils'
+import { buttonVariants } from '@/components/ui/button'
 import {
   Card,
   CardContent,
@@ -10,15 +10,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@/components/ui/card'
 
 interface AuthWrapperProps {
-  heading: string;
-  subtitle?: string;
-  footerLabel?: string;
-  footerLinkUrl?: string;
-  footerLinkLabel?: string;
-  children: React.ReactNode;
+  heading: string
+  subtitle?: string
+  footerLabel?: string
+  footerLinkUrl?: string
+  footerLinkLabel?: string
+  children: React.ReactNode
 }
 
 export const AuthWrapper = ({
@@ -61,5 +61,5 @@ export const AuthWrapper = ({
         </CardFooter>
       )}
     </Card>
-  );
-};
+  )
+}

@@ -1,13 +1,13 @@
-'use client';
+'use client'
 
-import React from 'react';
-import { Eye, EyeOff, Loader2 } from 'lucide-react';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { registerSchema } from '@/lib/validations/auth';
+import React from 'react'
+import { Eye, EyeOff, Loader2 } from 'lucide-react'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
+import { registerSchema } from '@/lib/validations/auth'
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'
 import {
   Form,
   FormControl,
@@ -15,17 +15,17 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { register } from '@/action/register';
-import { toast } from 'sonner';
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { register } from '@/action/register'
+import { toast } from 'sonner'
 
 export const RegisterForm = () => {
   const [showPassword, togglePassword] = React.useReducer(
     (state) => !state,
     false
-  );
-  const [isPending, startTransition] = React.useTransition();
+  )
+  const [isPending, startTransition] = React.useTransition()
 
   const form = useForm<z.infer<typeof registerSchema>>({
     resolver: zodResolver(registerSchema),
@@ -34,15 +34,15 @@ export const RegisterForm = () => {
       email: 'template@metafora.my.id',
       password: 'Metafora',
     },
-  });
+  })
 
   function onSubmit(values: z.infer<typeof registerSchema>) {
     startTransition(() => {
       register(values).then((data) => {
-        if (data.error) return toast.error(data.error);
-        if (data.success) return toast.success(data.success);
-      });
-    });
+        if (data.error) return toast.error(data.error)
+        if (data.success) return toast.success(data.success)
+      })
+    })
   }
 
   return (
@@ -141,5 +141,5 @@ export const RegisterForm = () => {
         </Button>
       </form>
     </Form>
-  );
-};
+  )
+}

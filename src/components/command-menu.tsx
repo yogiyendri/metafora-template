@@ -1,12 +1,12 @@
-'use client';
+'use client'
 
-import * as React from 'react';
-import { type DialogProps } from '@radix-ui/react-dialog';
-import { cn } from '@/lib/utils';
-import { File, Search } from 'lucide-react';
-import { useIsMobile } from '@/hooks/use-mobile';
+import * as React from 'react'
+import { type DialogProps } from '@radix-ui/react-dialog'
+import { cn } from '@/lib/utils'
+import { File, Search } from 'lucide-react'
+import { useIsMobile } from '@/hooks/use-mobile'
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'
 import {
   CommandDialog,
   CommandEmpty,
@@ -15,11 +15,11 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from '@/components/ui/command';
+} from '@/components/ui/command'
 
 export function CommandMenu({ ...props }: DialogProps) {
-  const [open, setOpen] = React.useState(false);
-  const isMobile = useIsMobile();
+  const [open, setOpen] = React.useState(false)
+  const isMobile = useIsMobile()
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -30,17 +30,17 @@ export function CommandMenu({ ...props }: DialogProps) {
           e.target instanceof HTMLTextAreaElement ||
           e.target instanceof HTMLSelectElement
         ) {
-          return;
+          return
         }
 
-        e.preventDefault();
-        setOpen((open) => !open);
+        e.preventDefault()
+        setOpen((open) => !open)
       }
-    };
+    }
 
-    document.addEventListener('keydown', down);
-    return () => document.removeEventListener('keydown', down);
-  }, []);
+    document.addEventListener('keydown', down)
+    return () => document.removeEventListener('keydown', down)
+  }, [])
 
   return (
     <>
@@ -94,5 +94,5 @@ export function CommandMenu({ ...props }: DialogProps) {
         </CommandList>
       </CommandDialog>
     </>
-  );
+  )
 }

@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import * as React from 'react';
-import { Label, Pie, PieChart, Sector } from 'recharts';
-import { PieSectorDataItem } from 'recharts/types/polar/Pie';
+import * as React from 'react'
+import { Label, Pie, PieChart, Sector } from 'recharts'
+import { PieSectorDataItem } from 'recharts/types/polar/Pie'
 
 import {
   Card,
@@ -10,21 +10,21 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@/components/ui/card'
 import {
   ChartConfig,
   ChartContainer,
   ChartStyle,
   ChartTooltip,
   ChartTooltipContent,
-} from '@/components/ui/chart';
+} from '@/components/ui/chart'
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select';
+} from '@/components/ui/select'
 
 const desktopData = [
   { month: 'january', desktop: 186, fill: 'var(--color-january)' },
@@ -32,7 +32,7 @@ const desktopData = [
   { month: 'march', desktop: 237, fill: 'var(--color-march)' },
   { month: 'april', desktop: 173, fill: 'var(--color-april)' },
   { month: 'may', desktop: 209, fill: 'var(--color-may)' },
-];
+]
 
 const chartConfig = {
   visitors: {
@@ -64,17 +64,17 @@ const chartConfig = {
     label: 'May',
     color: 'var(--chart-5)',
   },
-} satisfies ChartConfig;
+} satisfies ChartConfig
 
 export function ChartPieInteractive() {
-  const id = 'pie-interactive';
-  const [activeMonth, setActiveMonth] = React.useState(desktopData[0].month);
+  const id = 'pie-interactive'
+  const [activeMonth, setActiveMonth] = React.useState(desktopData[0].month)
 
   const activeIndex = React.useMemo(
     () => desktopData.findIndex((item) => item.month === activeMonth),
     [activeMonth]
-  );
-  const months = React.useMemo(() => desktopData.map((item) => item.month), []);
+  )
+  const months = React.useMemo(() => desktopData.map((item) => item.month), [])
 
   return (
     <Card data-chart={id} className="flex flex-col shadow-none">
@@ -93,10 +93,10 @@ export function ChartPieInteractive() {
           </SelectTrigger>
           <SelectContent align="end" className="rounded-xl">
             {months.map((key) => {
-              const config = chartConfig[key as keyof typeof chartConfig];
+              const config = chartConfig[key as keyof typeof chartConfig]
 
               if (!config) {
-                return null;
+                return null
               }
 
               return (
@@ -115,7 +115,7 @@ export function ChartPieInteractive() {
                     {config?.label}
                   </div>
                 </SelectItem>
-              );
+              )
             })}
           </SelectContent>
         </Select>
@@ -177,7 +177,7 @@ export function ChartPieInteractive() {
                           Visitors
                         </tspan>
                       </text>
-                    );
+                    )
                   }
                 }}
               />
@@ -186,5 +186,5 @@ export function ChartPieInteractive() {
         </ChartContainer>
       </CardContent>
     </Card>
-  );
+  )
 }

@@ -1,11 +1,11 @@
-import React from 'react';
-import { Grid, GridItem } from '@/components/ui/grid';
-import { ChartRadialDefault } from '@/components/charts/chart-radial-default';
-import { ChartRadialLabel } from '@/components/charts/chart-radial-label';
-import { ChartRadialGrid } from '@/components/charts/chart-radial-grid';
-import { ChartRadialText } from '@/components/charts/chart-radial-text';
-import { ChartRadialShape } from '@/components/charts/chart-radial-shape';
-import { ChartRadialStacked } from '@/components/charts/chart-radial-stacked';
+import React from 'react'
+import { Grid, GridItem } from '@/components/ui/grid'
+import { ChartRadialDefault } from '@/components/charts/chart-radial-default'
+import { ChartRadialLabel } from '@/components/charts/chart-radial-label'
+import { ChartRadialGrid } from '@/components/charts/chart-radial-grid'
+import { ChartRadialText } from '@/components/charts/chart-radial-text'
+import { ChartRadialShape } from '@/components/charts/chart-radial-shape'
+import { ChartRadialStacked } from '@/components/charts/chart-radial-stacked'
 
 export default function ChartRadialPage() {
   return (
@@ -29,5 +29,5 @@ export default function ChartRadialPage() {
         <ChartRadialStacked />
       </GridItem>
     </Grid>
-  );
+  )
 }

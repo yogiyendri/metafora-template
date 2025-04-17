@@ -1,5 +1,5 @@
-import NextAuth from 'next-auth';
-import authConfig from '@/config/auth.config';
+import NextAuth from 'next-auth'
+import authConfig from '@/config/auth.config'
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   pages: {
@@ -10,4 +10,4 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   trustHost: true,
   debug: true,
   ...authConfig,
-});
+})

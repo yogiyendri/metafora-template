@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import { Bar, BarChart, XAxis } from 'recharts';
+import { Bar, BarChart, XAxis } from 'recharts'
 
 import {
   Card,
@@ -8,13 +8,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@/components/ui/card'
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from '@/components/ui/chart';
+} from '@/components/ui/chart'
 
 const chartData = [
   { date: '2024-07-15', running: 450, swimming: 300 },
@@ -23,7 +23,7 @@ const chartData = [
   { date: '2024-07-18', running: 140, swimming: 550 },
   { date: '2024-07-19', running: 600, swimming: 350 },
   { date: '2024-07-20', running: 480, swimming: 400 },
-];
+]
 
 const chartConfig = {
   running: {
@@ -34,7 +34,7 @@ const chartConfig = {
     label: 'Swimming',
     color: 'var(--chart-2)',
   },
-} satisfies ChartConfig;
+} satisfies ChartConfig
 
 export function ChartTooltipIndicatorLine() {
   return (
@@ -54,7 +54,7 @@ export function ChartTooltipIndicatorLine() {
               tickFormatter={(value) => {
                 return new Date(value).toLocaleDateString('en-US', {
                   weekday: 'short',
-                });
+                })
               }}
             />
             <Bar
@@ -78,5 +78,5 @@ export function ChartTooltipIndicatorLine() {
         </ChartContainer>
       </CardContent>
     </Card>
-  );
+  )
 }

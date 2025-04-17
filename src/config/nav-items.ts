@@ -5,25 +5,25 @@ import {
   Rocket,
   UserPlus2,
   type LucideIcon,
-} from 'lucide-react';
+} from 'lucide-react'
 
 interface SubMenuItem {
-  title: string;
-  url: string;
-  badge?: string;
+  title: string
+  url: string
+  badge?: string
 }
 
 interface MenuItem {
-  name: string;
-  url?: string;
-  icon: LucideIcon;
-  badge?: string;
-  items?: SubMenuItem[];
+  name: string
+  url?: string
+  icon: LucideIcon
+  badge?: string
+  items?: SubMenuItem[]
 }
 
 export interface NavItemsProps {
-  title: string;
-  menu: MenuItem[];
+  title: string
+  menu: MenuItem[]
 }
 
 export const navItems: NavItemsProps[] = [
@@ -109,4 +109,4 @@ export const navItems: NavItemsProps[] = [
       },
     ],
   },
-];
+]

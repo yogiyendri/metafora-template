@@ -1,29 +1,29 @@
-'use client';
+'use client'
 
-import { useIsMobile } from '@/hooks/use-mobile';
-import { cn } from '@/lib/utils';
-import React from 'react';
-import { SidebarTrigger } from '@/components/ui/sidebar';
-import Link from 'next/link';
-import { Crown } from 'lucide-react';
-import { UserNavigation } from '@/components/user-nav';
-import { ModeToggle } from '@/components/mode-toggle';
-import { CommandMenu } from '@/components/command-menu';
+import { useIsMobile } from '@/hooks/use-mobile'
+import { cn } from '@/lib/utils'
+import React from 'react'
+import { SidebarTrigger } from '@/components/ui/sidebar'
+import Link from 'next/link'
+import { Crown } from 'lucide-react'
+import { UserNavigation } from '@/components/user-nav'
+import { ModeToggle } from '@/components/mode-toggle'
+import { CommandMenu } from '@/components/command-menu'
 
 export const AppHeader = () => {
-  const [isScrolled, setIsScrolled] = React.useState<boolean>(false);
-  const isMobile = useIsMobile();
+  const [isScrolled, setIsScrolled] = React.useState<boolean>(false)
+  const isMobile = useIsMobile()
 
   React.useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+      setIsScrolled(window.scrollY > 10)
+    }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
     <header
@@ -48,5 +48,5 @@ export const AppHeader = () => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}

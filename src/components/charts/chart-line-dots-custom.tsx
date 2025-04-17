@@ -1,20 +1,20 @@
-'use client';
+'use client'
 
-import { GitCommitVertical } from 'lucide-react';
-import { CartesianGrid, Line, LineChart, XAxis } from 'recharts';
+import { GitCommitVertical } from 'lucide-react'
+import { CartesianGrid, Line, LineChart, XAxis } from 'recharts'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@/components/ui/card'
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from '@/components/ui/chart';
+} from '@/components/ui/chart'
 
 const chartData = [
   { month: 'January', desktop: 186, mobile: 80 },
@@ -23,7 +23,7 @@ const chartData = [
   { month: 'April', desktop: 73, mobile: 190 },
   { month: 'May', desktop: 209, mobile: 130 },
   { month: 'June', desktop: 214, mobile: 140 },
-];
+]
 
 const chartConfig = {
   desktop: {
@@ -34,7 +34,7 @@ const chartConfig = {
     label: 'Mobile',
     color: 'var(--chart-2)',
   },
-} satisfies ChartConfig;
+} satisfies ChartConfig
 
 export function ChartLineDotsCustom() {
   return (
@@ -71,7 +71,7 @@ export function ChartLineDotsCustom() {
               stroke="var(--color-desktop)"
               strokeWidth={2}
               dot={({ cx, cy, payload }) => {
-                const r = 24;
+                const r = 24
                 return (
                   <GitCommitVertical
                     key={payload.month}
@@ -82,12 +82,12 @@ export function ChartLineDotsCustom() {
                     fill="hsl(var(--background))"
                     stroke="var(--color-desktop)"
                   />
-                );
+                )
               }}
             />
           </LineChart>
         </ChartContainer>
       </CardContent>
     </Card>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-'use client';
+'use client'
 
-import { Pie, PieChart } from 'recharts';
+import { Pie, PieChart } from 'recharts'
 
 import {
   Card,
@@ -8,13 +8,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@/components/ui/card'
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from '@/components/ui/chart';
+} from '@/components/ui/chart'
 
 const chartData = [
   { browser: 'chrome', visitors: 275, fill: 'var(--color-chrome)' },
@@ -22,7 +22,7 @@ const chartData = [
   { browser: 'firefox', visitors: 187, fill: 'var(--color-firefox)' },
   { browser: 'edge', visitors: 173, fill: 'var(--color-edge)' },
   { browser: 'other', visitors: 90, fill: 'var(--color-other)' },
-];
+]
 
 const chartConfig = {
   visitors: {
@@ -48,7 +48,7 @@ const chartConfig = {
     label: 'Other',
     color: 'var(--chart-5)',
   },
-} satisfies ChartConfig;
+} satisfies ChartConfig
 
 export function ChartPieLabel() {
   return (
@@ -69,5 +69,5 @@ export function ChartPieLabel() {
         </ChartContainer>
       </CardContent>
     </Card>
-  );
+  )
 }

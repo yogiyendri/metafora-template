@@ -1,7 +1,7 @@
-import { cn } from '@/lib/utils';
-import { Slot } from '@radix-ui/react-slot';
-import { cva, type VariantProps } from 'class-variance-authority';
-import * as React from 'react';
+import { cn } from '@/lib/utils'
+import { Slot } from '@radix-ui/react-slot'
+import { cva, type VariantProps } from 'class-variance-authority'
+import * as React from 'react'
 
 const gridVariants = cva('grid grid-cols-1', {
   variants: {
@@ -42,7 +42,7 @@ const gridVariants = cva('grid grid-cols-1', {
     row: 'auto',
     gap: 4,
   },
-});
+})
 
 export interface GridProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -56,10 +56,10 @@ const Grid: React.FC<GridProps> = React.forwardRef<HTMLDivElement, GridProps>(
         className={cn(gridVariants({ col, row, gap }), className)}
         {...props}
       />
-    );
+    )
   }
-);
-Grid.displayName = 'Grid';
+)
+Grid.displayName = 'Grid'
 
 const gridItemVariants = cva('', {
   variants: {
@@ -88,27 +88,27 @@ const gridItemVariants = cva('', {
     span: 1,
     rowSpan: 1,
   },
-});
+})
 
 export interface GridItemProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof gridItemVariants> {
-  asChild?: boolean;
+  asChild?: boolean
 }
 
 const GridItem: React.FC<GridItemProps> = React.forwardRef<
   HTMLDivElement,
   GridItemProps
 >(({ span, rowSpan, asChild, className, ...props }, ref) => {
-  const Comp = asChild ? Slot : 'div';
+  const Comp = asChild ? Slot : 'div'
   return (
     <Comp
       ref={ref}
       className={cn(gridItemVariants({ span, rowSpan }), className)}
       {...props}
     />
-  );
-});
-GridItem.displayName = 'GridItem';
+  )
+})
+GridItem.displayName = 'GridItem'
 
-export { Grid, GridItem };
+export { Grid, GridItem }

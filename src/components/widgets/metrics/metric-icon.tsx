@@ -3,14 +3,14 @@ import {
   ArrowUpRight,
   FileText,
   type LucideIcon,
-} from 'lucide-react';
-import { cn } from '@/lib/utils';
+} from 'lucide-react'
+import { cn } from '@/lib/utils'
 import {
   Card,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@/components/ui/card'
 
 const colorVariants = {
   blue: { bg: 'bg-blue-500/10', text: 'text-blue-500' },
@@ -23,19 +23,19 @@ const colorVariants = {
   pink: { bg: 'bg-pink-500/10', text: 'text-pink-500' },
   indigo: { bg: 'bg-indigo-500/10', text: 'text-indigo-500' },
   cyan: { bg: 'bg-cyan-500/10', text: 'text-cyan-500' },
-} as const;
+} as const
 
-type ColorType = keyof typeof colorVariants;
+type ColorType = keyof typeof colorVariants
 
 type MetricsIconProps = React.ComponentProps<typeof Card> & {
-  className?: string;
-  title: string;
-  value: number | React.ReactNode;
-  percentage?: number;
-  detailPercentage?: string;
-  icon?: LucideIcon;
-  color?: ColorType;
-};
+  className?: string
+  title: string
+  value: number | React.ReactNode
+  percentage?: number
+  detailPercentage?: string
+  icon?: LucideIcon
+  color?: ColorType
+}
 
 export const MetricIcon = ({
   className,
@@ -84,5 +84,5 @@ export const MetricIcon = ({
         )}
       </CardHeader>
     </Card>
-  );
-};
+  )
+}

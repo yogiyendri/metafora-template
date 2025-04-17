@@ -1,19 +1,19 @@
-'use client';
+'use client'
 
-import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts';
+import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@/components/ui/card'
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from '@/components/ui/chart';
+} from '@/components/ui/chart'
 
 const chartData = [
   { month: 'January', desktop: 186 },
@@ -22,14 +22,14 @@ const chartData = [
   { month: 'April', desktop: 73 },
   { month: 'May', desktop: 209 },
   { month: 'June', desktop: 214 },
-];
+]
 
 const chartConfig = {
   desktop: {
     label: 'Desktop',
     color: 'var(--chart-1)',
   },
-} satisfies ChartConfig;
+} satisfies ChartConfig
 
 export function ChartAreaDefault() {
   return (
@@ -73,5 +73,5 @@ export function ChartAreaDefault() {
         </ChartContainer>
       </CardContent>
     </Card>
-  );
+  )
 }

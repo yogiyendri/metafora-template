@@ -1,20 +1,20 @@
-'use client';
+'use client'
 
-import { Activity } from 'lucide-react';
-import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts';
+import { Activity } from 'lucide-react'
+import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@/components/ui/card'
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from '@/components/ui/chart';
+} from '@/components/ui/chart'
 
 const chartData = [
   { month: 'January', desktop: 186 },
@@ -23,7 +23,7 @@ const chartData = [
   { month: 'April', desktop: 73 },
   { month: 'May', desktop: 209 },
   { month: 'June', desktop: 214 },
-];
+]
 
 const chartConfig = {
   desktop: {
@@ -31,7 +31,7 @@ const chartConfig = {
     color: 'var(--chart-1)',
     icon: Activity,
   },
-} satisfies ChartConfig;
+} satisfies ChartConfig
 
 export function ChartAreaStep() {
   return (
@@ -75,5 +75,5 @@ export function ChartAreaStep() {
         </ChartContainer>
       </CardContent>
     </Card>
-  );
+  )
 }

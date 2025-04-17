@@ -1,5 +1,5 @@
-import { type NextAuthConfig } from 'next-auth';
-import Credentials from 'next-auth/providers/credentials';
+import { type NextAuthConfig } from 'next-auth'
+import Credentials from 'next-auth/providers/credentials'
 
 export default {
   providers: [
@@ -18,17 +18,17 @@ export default {
           name: 'Metafora',
           email: 'template@metafora.my.id',
           password: 'Metafora',
-        };
+        }
 
         if (
           credentials?.email === user.email &&
           credentials?.password === user.password
         ) {
-          return user;
+          return user
         }
 
-        return null;
+        return null
       },
     }),
   ],
-} satisfies NextAuthConfig;
+} satisfies NextAuthConfig

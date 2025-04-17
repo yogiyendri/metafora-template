@@ -1,7 +1,7 @@
-import React from 'react';
-import { Grid, GridItem } from '@/components/ui/grid';
-import { MetricIcon } from '@/components/widgets/metrics/metric-icon';
-import { Box, CircleDollarSign, RotateCcw, Users2 } from 'lucide-react';
+import React from 'react'
+import { Grid, GridItem } from '@/components/ui/grid'
+import { MetricIcon } from '@/components/widgets/metrics/metric-icon'
+import { Box, CircleDollarSign, RotateCcw, Users2 } from 'lucide-react'
 
 export default function MetricsPage() {
   return (
@@ -51,5 +51,5 @@ export default function MetricsPage() {
         />
       </GridItem>
     </Grid>
-  );
+  )
 }

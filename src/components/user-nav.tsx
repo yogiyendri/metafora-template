@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import React from 'react';
-import { Button } from '@/components/ui/button';
+import React from 'react'
+import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,10 +11,10 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import Link from 'next/link';
-import { LogOut, Settings, User } from 'lucide-react';
+} from '@/components/ui/dropdown-menu'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import Link from 'next/link'
+import { LogOut, Settings, User } from 'lucide-react'
 
 export const UserNavigation = () => {
   return (
@@ -66,5 +66,5 @@ export const UserNavigation = () => {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
-};
+  )
+}

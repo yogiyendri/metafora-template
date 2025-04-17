@@ -1,13 +1,13 @@
-'use client';
+'use client'
 
-import React from 'react';
-import { Eye, EyeOff, Loader2 } from 'lucide-react';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { loginSchema } from '@/lib/validations/auth';
+import React from 'react'
+import { Eye, EyeOff, Loader2 } from 'lucide-react'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
+import { loginSchema } from '@/lib/validations/auth'
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'
 import {
   Form,
   FormControl,
@@ -15,19 +15,19 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { login } from '@/action/login';
-import { toast } from 'sonner';
-import { useRouter } from 'next/navigation';
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { login } from '@/action/login'
+import { toast } from 'sonner'
+import { useRouter } from 'next/navigation'
 
 export const LoginForm = () => {
   const [showPassword, togglePassword] = React.useReducer(
     (state) => !state,
     false
-  );
-  const [isPending, startTransition] = React.useTransition();
-  const router = useRouter();
+  )
+  const [isPending, startTransition] = React.useTransition()
+  const router = useRouter()
 
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
@@ -35,18 +35,18 @@ export const LoginForm = () => {
       email: 'template@metafora.my.id',
       password: 'Metafora',
     },
-  });
+  })
 
   function onSubmit(values: z.infer<typeof loginSchema>) {
     startTransition(() => {
       login(values).then((data) => {
-        if (data.error) return toast.error(data.error);
+        if (data.error) return toast.error(data.error)
         if (data.success) {
-          toast.success(data.success);
-          router.push('/');
+          toast.success(data.success)
+          router.push('/')
         }
-      });
-    });
+      })
+    })
   }
 
   return (
@@ -127,5 +127,5 @@ export const LoginForm = () => {
         </Button>
       </form>
     </Form>
-  );
-};
+  )
+}

@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import { ArrowDownFromLine, ArrowUpFromLine } from 'lucide-react';
-import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from 'recharts';
+import { ArrowDownFromLine, ArrowUpFromLine } from 'lucide-react'
+import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from 'recharts'
 
 import {
   Card,
@@ -9,7 +9,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@/components/ui/card'
 import {
   ChartConfig,
   ChartContainer,
@@ -17,7 +17,7 @@ import {
   ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
-} from '@/components/ui/chart';
+} from '@/components/ui/chart'
 
 const chartData = [
   { month: 'January', desktop: 186, mobile: 80 },
@@ -26,7 +26,7 @@ const chartData = [
   { month: 'April', desktop: 73, mobile: 190 },
   { month: 'May', desktop: 209, mobile: 130 },
   { month: 'June', desktop: 214, mobile: 140 },
-];
+]
 
 const chartConfig = {
   desktop: {
@@ -39,7 +39,7 @@ const chartConfig = {
     color: 'var(--chart-2)',
     icon: ArrowUpFromLine,
   },
-} satisfies ChartConfig;
+} satisfies ChartConfig
 
 export function ChartRadarIcons() {
   return (
@@ -79,5 +79,5 @@ export function ChartRadarIcons() {
         </ChartContainer>
       </CardContent>
     </Card>
-  );
+  )
 }

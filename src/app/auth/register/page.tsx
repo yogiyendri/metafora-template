@@ -1,6 +1,6 @@
-import React from 'react';
-import { AuthWrapper } from '@/components/auth/auth-wrapper';
-import { RegisterForm } from '@/components/auth/register-form';
+import React from 'react'
+import { AuthWrapper } from '@/components/auth/auth-wrapper'
+import { RegisterForm } from '@/components/auth/register-form'
 
 export default function RegisterPage() {
   return (
@@ -13,5 +13,5 @@ export default function RegisterPage() {
     >
       <RegisterForm />
     </AuthWrapper>
-  );
+  )
 }

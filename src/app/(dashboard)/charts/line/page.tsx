@@ -1,15 +1,15 @@
-import React from 'react';
-import { Grid, GridItem } from '@/components/ui/grid';
-import { ChartLineDefault } from '@/components/charts/chart-line-default';
-import { ChartLineLinear } from '@/components/charts/chart-line-linear';
-import { ChartLineStep } from '@/components/charts/chart-line-step';
-import { ChartLineMultiple } from '@/components/charts/chart-line-multiple';
-import { ChartLineDots } from '@/components/charts/chart-line-dots';
-import { ChartLineDotsCustom } from '@/components/charts/chart-line-dots-custom';
-import { ChartLineDotsColors } from '@/components/charts/chart-line-dots-colors';
-import { ChartLineLabel } from '@/components/charts/chart-line-label';
-import { ChartLineLabelCustom } from '@/components/charts/chart-line-label-custom';
-import { ChartLineInteractive } from '@/components/charts/chart-line-interactive';
+import React from 'react'
+import { Grid, GridItem } from '@/components/ui/grid'
+import { ChartLineDefault } from '@/components/charts/chart-line-default'
+import { ChartLineLinear } from '@/components/charts/chart-line-linear'
+import { ChartLineStep } from '@/components/charts/chart-line-step'
+import { ChartLineMultiple } from '@/components/charts/chart-line-multiple'
+import { ChartLineDots } from '@/components/charts/chart-line-dots'
+import { ChartLineDotsCustom } from '@/components/charts/chart-line-dots-custom'
+import { ChartLineDotsColors } from '@/components/charts/chart-line-dots-colors'
+import { ChartLineLabel } from '@/components/charts/chart-line-label'
+import { ChartLineLabelCustom } from '@/components/charts/chart-line-label-custom'
+import { ChartLineInteractive } from '@/components/charts/chart-line-interactive'
 
 export default function ChartsLinePage() {
   return (
@@ -45,5 +45,5 @@ export default function ChartsLinePage() {
         <ChartLineInteractive />
       </GridItem>
     </Grid>
-  );
+  )
 }

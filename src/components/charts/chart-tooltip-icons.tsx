@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import { Footprints, Waves } from 'lucide-react';
-import { Bar, BarChart, XAxis } from 'recharts';
+import { Footprints, Waves } from 'lucide-react'
+import { Bar, BarChart, XAxis } from 'recharts'
 
 import {
   Card,
@@ -9,13 +9,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@/components/ui/card'
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from '@/components/ui/chart';
+} from '@/components/ui/chart'
 
 const chartData = [
   { date: '2024-07-15', running: 450, swimming: 300 },
@@ -24,7 +24,7 @@ const chartData = [
   { date: '2024-07-18', running: 140, swimming: 550 },
   { date: '2024-07-19', running: 600, swimming: 350 },
   { date: '2024-07-20', running: 480, swimming: 400 },
-];
+]
 
 const chartConfig = {
   running: {
@@ -37,7 +37,7 @@ const chartConfig = {
     color: 'var(--chart-2)',
     icon: Waves,
   },
-} satisfies ChartConfig;
+} satisfies ChartConfig
 
 export function ChartTooltipIcons() {
   return (
@@ -57,7 +57,7 @@ export function ChartTooltipIcons() {
               tickFormatter={(value) => {
                 return new Date(value).toLocaleDateString('en-US', {
                   weekday: 'short',
-                });
+                })
               }}
             />
             <Bar
@@ -81,5 +81,5 @@ export function ChartTooltipIcons() {
         </ChartContainer>
       </CardContent>
     </Card>
-  );
+  )
 }

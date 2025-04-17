@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { ChevronRight } from 'lucide-react';
-import { usePathname } from 'next/navigation';
-import { type NavItemsProps } from '@/config/nav-items';
+import Link from 'next/link'
+import { ChevronRight } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import { type NavItemsProps } from '@/config/nav-items'
 
 import {
   SidebarGroup,
@@ -14,22 +14,22 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
   useSidebar,
-} from '@/components/ui/sidebar';
+} from '@/components/ui/sidebar'
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from '@/components/ui/collapsible';
+} from '@/components/ui/collapsible'
 
 export const NavItems = ({ navItems }: { navItems: NavItemsProps[] }) => {
-  const pathname = usePathname();
-  const { isMobile, setOpenMobile } = useSidebar();
+  const pathname = usePathname()
+  const { isMobile, setOpenMobile } = useSidebar()
 
   const handleCloseSidebar = () => {
     if (isMobile) {
-      setOpenMobile(false);
+      setOpenMobile(false)
     }
-  };
+  }
 
   return (
     <>
@@ -40,7 +40,7 @@ export const NavItems = ({ navItems }: { navItems: NavItemsProps[] }) => {
             {section.menu.map((item) => {
               const isActive =
                 pathname === item.url ||
-                item.items?.some((subItem) => pathname === subItem.url);
+                item.items?.some((subItem) => pathname === subItem.url)
 
               return item.items ? (
                 <Collapsible
@@ -92,11 +92,11 @@ export const NavItems = ({ navItems }: { navItems: NavItemsProps[] }) => {
                     <SidebarMenuBadge>{item.badge}</SidebarMenuBadge>
                   )}
                 </SidebarMenuItem>
-              );
+              )
             })}
           </SidebarMenu>
         </SidebarGroup>
       ))}
     </>
-  );
-};
+  )
+}

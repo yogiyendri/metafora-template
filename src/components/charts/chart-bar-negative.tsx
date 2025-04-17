@@ -1,19 +1,19 @@
-'use client';
+'use client'
 
-import { Bar, BarChart, CartesianGrid, Cell, LabelList } from 'recharts';
+import { Bar, BarChart, CartesianGrid, Cell, LabelList } from 'recharts'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from '@/components/ui/card'
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from '@/components/ui/chart';
+} from '@/components/ui/chart'
 
 const chartData = [
   { month: 'January', visitors: 186 },
@@ -22,13 +22,13 @@ const chartData = [
   { month: 'April', visitors: 173 },
   { month: 'May', visitors: -209 },
   { month: 'June', visitors: 214 },
-];
+]
 
 const chartConfig = {
   visitors: {
     label: 'Visitors',
   },
-} satisfies ChartConfig;
+} satisfies ChartConfig
 
 export function ChartBarNegative() {
   return (
@@ -58,5 +58,5 @@ export function ChartBarNegative() {
         </ChartContainer>
       </CardContent>
     </Card>
-  );
+  )
 }
