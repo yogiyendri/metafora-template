@@ -22,7 +22,7 @@ import { ChartContainer } from '@/components/ui/chart'
 interface MetricsProgressProps {
   className?: string
   title: string
-  value: string | number
+  value: React.ReactNode
   percentage: number
   detailPercentage: string
   progress: number
