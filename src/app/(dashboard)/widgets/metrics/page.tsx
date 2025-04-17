@@ -3,6 +3,7 @@ import { Grid, GridItem } from '@/components/ui/grid'
 import { MetricIcon } from '@/components/widgets/metric-icon'
 import { Box, CircleDollarSign, RotateCcw, Users2 } from 'lucide-react'
 import { MetricChart } from '@/components/widgets/metric-chart'
+import { MetricProgress } from '@/components/widgets/metric-progress'
 
 export default function MetricsPage() {
   return (
@@ -131,6 +132,46 @@ export default function MetricsPage() {
           ]}
           percentage={8.5}
           detailPercentage="vs last week"
+        />
+      </GridItem>
+      <GridItem span={3}>
+        <MetricProgress
+          title="Sales"
+          value={(4520).toLocaleString('en-US', {
+            currency: 'USD',
+            style: 'currency',
+            maximumFractionDigits: 0,
+          })}
+          percentage={12.43}
+          detailPercentage="vs last year"
+          progress={50}
+        />
+      </GridItem>
+      <GridItem span={3}>
+        <MetricProgress
+          title="Refunds"
+          value={128}
+          percentage={-5.2}
+          detailPercentage="vs last month"
+          progress={24}
+        />
+      </GridItem>
+      <GridItem span={3}>
+        <MetricProgress
+          title="Visitors Today"
+          value={3254}
+          percentage={1.2}
+          detailPercentage="vs yesterday"
+          progress={76}
+        />
+      </GridItem>
+      <GridItem span={3}>
+        <MetricProgress
+          title="Orders"
+          value={542}
+          percentage={8.5}
+          detailPercentage="vs last week"
+          progress={94}
         />
       </GridItem>
     </Grid>
