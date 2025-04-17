@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Metafora Template - Next.js + Shadcn UI
 
-## Getting Started
+A modern and minimalist dashboard template built with Next.js (App Router) and Shadcn UI, perfect for admin panels, monitoring systems, or custom CMS projects.
 
-First, run the development server:
+## ✨ Features
+
+- Built with Next.js App Router
+- Shadcn UI with Tailwind CSS
+- Reusable UI components
+- Modular and scalable structure
+- Dark mode support
+- Ready to deploy to Vercel
+
+## 🛠️ Tech Stack
+
+- Framework: Next.js
+- UI Library: Shadcn UI
+- Styling: Tailwind CSS
+- State Management: (Opsional - can use Zustand, Redux, Context)
+- Authentication: NextAuth/Auth.js
+
+## 🚀 Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/username/nama-dashboard.git # Clone the repository
+
+cd nama-dashboard # Navigate to the project directory
+
+npm install # Install all dependencies
+
+npm run dev # Start the development server
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Configuration
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create file .env.local:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+DATABASE_URL=your_database_url
+Sesuaikan dengan kebutuhanmu.
+```
 
-## Learn More
+## 🧩 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+app/
+  ├── dashboard/
+  ├── auth/
+  ├── layout.tsx
+components/
+  ├── ui/
+  └── sidebar.tsx
+lib/
+  ├── utils.ts
+  └── auth.ts
+public/
+  └── preview.png
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✍️ Lisensi
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[MIT License](https://github.com/yogiyendri/metafora-template/blob/main/LICENSE)
 
-## Deploy on Vercel
+## 👤 Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Yogi Yendri Saputra
+- GitHub: [@yogiyendri](https://github.com/yogiyendri)
