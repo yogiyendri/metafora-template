@@ -13,7 +13,7 @@ export default function NotFound() {
     <section className="flex min-h-screen flex-col items-center justify-center px-6 text-center lg:flex-row-reverse lg:justify-between lg:px-60 lg:text-left">
       <figure className="flex justify-center">
         <Image
-          src="/not-found-img.svg"
+          src="/assets/not-found-img.svg"
           alt="Illustration of a page not found by Freepik"
           width={384}
           height={384}
