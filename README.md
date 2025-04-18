@@ -22,9 +22,9 @@ A modern and minimalist dashboard template built with Next.js (App Router) and S
 ## 🚀 Installation
 
 ```bash
-git clone https://github.com/username/nama-dashboard.git # Clone the repository
+git clone https://github.com/yogiyendri/metafora-template.git # Clone the repository
 
-cd nama-dashboard # Navigate to the project directory
+cd metafora-template # Navigate to the project directory
 
 npm install # Install all dependencies
 
@@ -33,29 +33,37 @@ npm run dev # Start the development server
 
 ## ⚙️ Configuration
 
-Create file .env.local:
+Copy file .env.example and rename it to .env.local
 
 ```env
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-DATABASE_URL=your_database_url
-Sesuaikan dengan kebutuhanmu.
+AUTH_SECRET="secret" # Added by `npx auth`. Read more: https://cli.authjs.dev
 ```
 
 ## 🧩 Project Structure
 
 ```bash
+action/
 app/
-  ├── dashboard/
+  ├── (dashboard)
+  ├── api/
   ├── auth/
   ├── layout.tsx
 components/
+  ├── auth/
+  ├── charts/
   ├── ui/
-  └── sidebar.tsx
+  ├── widgets/
+  └── sidebar
+config/
+  ├── auth.config.ts
+  ├── auth.ts
+  └── fonts.ts
+  └── nav-items.ts
+  └── route.ts
+hooks/
 lib/
-  ├── utils.ts
-  └── auth.ts
-public/
-  └── preview.png
+  ├── validations/
+  └── utils.ts
 ```
 
 ## ✍️ Lisensi
