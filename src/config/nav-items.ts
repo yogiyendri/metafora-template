@@ -3,6 +3,7 @@ import {
   LayoutGrid,
   LogIn,
   Rocket,
+  Send,
   UserPlus2,
   type LucideIcon,
 } from 'lucide-react'
@@ -91,6 +92,12 @@ export const navItems: NavItemsProps[] = [
             badge: 'New',
           },
         ],
+      },
+      {
+        name: 'Posts',
+        url: '/posts',
+        icon: Send,
+        badge: 'Soon',
       },
     ],
   },
