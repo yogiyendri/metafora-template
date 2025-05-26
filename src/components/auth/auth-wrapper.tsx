@@ -32,7 +32,7 @@ export const AuthWrapper = ({
   return (
     <Card className="fixed inset-0 shadow-none md:relative md:min-w-sm">
       <CardHeader className="text-center">
-        <div className="bg-primary mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-md text-white">
+        <div className="bg-sidebar-primary mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-md text-white">
           <Crown size={24} aria-label="logo" />
         </div>
         <CardTitle className="text-lg">{heading}</CardTitle>
