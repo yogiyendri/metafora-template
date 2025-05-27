@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import { usePathname } from 'next/navigation'
-import { type NavItemsProps } from '@/config/nav-items'
+import { type MenuItem, type NavItemsProps } from '@/config/nav-items'
 
 import {
   SidebarGroup,
+  SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuBadge,
@@ -21,7 +22,13 @@ import {
   CollapsibleTrigger,
 } from '@/components/ui/collapsible'
 
-export const NavItems = ({ navItems }: { navItems: NavItemsProps[] }) => {
+export const NavItems = ({
+  navMain,
+  navItems,
+}: {
+  navMain: MenuItem[]
+  navItems: NavItemsProps[]
+}) => {
   const pathname = usePathname()
   const { isMobile, setOpenMobile } = useSidebar()
 
@@ -33,6 +40,31 @@ export const NavItems = ({ navItems }: { navItems: NavItemsProps[] }) => {
 
   return (
     <>
+      <SidebarGroup>
+        <SidebarGroupContent>
+          <SidebarMenu>
+            {navMain.map((item) => {
+              const isActive =
+                pathname === item.url ||
+                item.items?.some((subItem) => pathname === subItem.url)
+
+              return (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton isActive={isActive} asChild>
+                    <Link href={item.url ?? '#'} onClick={handleCloseSidebar}>
+                      {item.icon && <item.icon />}
+                      <span>{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                  {item.badge && (
+                    <SidebarMenuBadge>{item.badge}</SidebarMenuBadge>
+                  )}
+                </SidebarMenuItem>
+              )
+            })}
+          </SidebarMenu>
+        </SidebarGroupContent>
+      </SidebarGroup>
       {navItems.map((section) => (
         <SidebarGroup key={section.title}>
           <SidebarGroupLabel>{section.title}</SidebarGroupLabel>
@@ -44,16 +76,16 @@ export const NavItems = ({ navItems }: { navItems: NavItemsProps[] }) => {
 
               return item.items ? (
                 <Collapsible
-                  key={item.name}
+                  key={item.title}
                   asChild
                   defaultOpen={isActive}
                   className="group/collapsible"
                 >
                   <SidebarMenuItem>
                     <CollapsibleTrigger asChild>
-                      <SidebarMenuButton tooltip={item.name}>
+                      <SidebarMenuButton tooltip={item.title}>
                         {item.icon && <item.icon />}
-                        <span>{item.name}</span>
+                        <span>{item.title}</span>
                         <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                       </SidebarMenuButton>
                     </CollapsibleTrigger>
@@ -84,11 +116,11 @@ export const NavItems = ({ navItems }: { navItems: NavItemsProps[] }) => {
                   </SidebarMenuItem>
                 </Collapsible>
               ) : (
-                <SidebarMenuItem key={item.name}>
+                <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton isActive={isActive} asChild>
                     <Link href={item.url ?? '#'} onClick={handleCloseSidebar}>
                       {item.icon && <item.icon />}
-                      <span>{item.name}</span>
+                      <span>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
                   {item.badge && (

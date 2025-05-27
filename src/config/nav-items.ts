@@ -14,8 +14,8 @@ interface SubMenuItem {
   badge?: string
 }
 
-interface MenuItem {
-  name: string
+export interface MenuItem {
+  title: string
   url?: string
   icon: LucideIcon
   badge?: string
@@ -27,22 +27,20 @@ export interface NavItemsProps {
   menu: MenuItem[]
 }
 
-export const navItems: NavItemsProps[] = [
+export const navMain: MenuItem[] = [
   {
-    title: 'Overview',
-    menu: [
-      {
-        name: 'Dashboard',
-        url: '/',
-        icon: Rocket,
-      },
-    ],
+    title: 'Dashboard',
+    url: '/',
+    icon: Rocket,
   },
+]
+
+export const navItems: NavItemsProps[] = [
   {
     title: 'Components',
     menu: [
       {
-        name: 'Widgets',
+        title: 'Widgets',
         icon: LayoutGrid,
         items: [
           {
@@ -53,7 +51,7 @@ export const navItems: NavItemsProps[] = [
         ],
       },
       {
-        name: 'Charts',
+        title: 'Charts',
         icon: ChartColumnBig,
         items: [
           {
@@ -94,7 +92,7 @@ export const navItems: NavItemsProps[] = [
         ],
       },
       {
-        name: 'Posts',
+        title: 'Posts',
         url: '/posts',
         icon: Send,
         badge: 'Soon',
@@ -105,12 +103,12 @@ export const navItems: NavItemsProps[] = [
     title: 'Authentication',
     menu: [
       {
-        name: 'Register',
+        title: 'Register',
         url: '/auth/register',
         icon: UserPlus2,
       },
       {
-        name: 'Login',
+        title: 'Login',
         url: '/auth/login',
         icon: LogIn,
       },

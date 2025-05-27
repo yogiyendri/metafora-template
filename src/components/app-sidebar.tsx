@@ -12,7 +12,7 @@ import {
 import Link from 'next/link'
 import { Crown } from 'lucide-react'
 import { NavItems } from '@/components/nav-items'
-import { navItems } from '@/config/nav-items'
+import { navItems, navMain } from '@/config/nav-items'
 
 export const AppSidebar = ({
   ...props
@@ -39,7 +39,7 @@ export const AppSidebar = ({
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavItems navItems={navItems} />
+        <NavItems navMain={navMain} navItems={navItems} />
       </SidebarContent>
     </Sidebar>
   )
